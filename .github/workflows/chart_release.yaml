@@ -15,10 +15,7 @@ jobs:
 
       - name: Install Helm
         uses: azure/setup-helm@v1
-
-      - name: Add dependency chart repos
-        run: |
-          helm repo add dandydeveloper https://dandydeveloper.github.io/charts/
+        
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
