@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "alfred.fullname" . }}
+  labels:
+    app: {{ template "alfred.name" . }}
+    release: {{ .Release.Name }}
+spec:
+  ports:
+    - port: {{ .Values.env.PORT }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "alfred.selectorLabels" . | nindent 4 }}

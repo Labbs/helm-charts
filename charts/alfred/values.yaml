@@ -1,0 +1,29 @@
+# Default values for alfred.
+
+image:
+  repository: ghcr.io/labbs/alfred
+  pullPolicy: IfNotPresent
+  tag: "v1.0.0-beta3"
+
+nameOverride: ""
+fullnameOverride: ""
+
+env:
+  ENGINE: sqlite3
+  DNS: alfred.sqlite
+  DEBUG: false
+  PORT: 8080
+  SESSION_SECRET_KEY: qwertyuiopasdfghjklzxcvbnm1234567890
+  SESSION_EXPIRE: 3600
+  ENABLE_HTTP_LOGS: false
+  ENABLE_METRICS_PAGE: false
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: alfred.test.local
+  tls:
+    - secretName: alfred-tls
+      hosts:
+        - alfred.test.local
