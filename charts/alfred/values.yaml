@@ -10,7 +10,7 @@ fullnameOverride: ""
 
 env:
   ENGINE: sqlite3
-  DNS: alfred.sqlite
+  DSN: alfred.sqlite
   DEBUG: false
   PORT: 8080
   SESSION_SECRET_KEY: qwertyuiopasdfghjklzxcvbnm1234567890
