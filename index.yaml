@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  alfred:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-10-27T11:19:12.04990305Z"
+    description: alfred application
+    digest: ea6f90c29d70805f2fa42a128f715dd4c04e1e8c727df8731277368cc2672104
+    name: alfred
+    type: application
+    urls:
+    - https://github.com/Labbs/helm-charts/releases/download/alfred-0.1.0/alfred-0.1.0.tgz
+    version: 0.1.0
   github-actions-exporter:
   - apiVersion: v2
     appVersion: 1.8.1
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://labbs.github.io/helm-charts/github-actions-exporter-0.1.4.tgz
     version: 0.1.4
-generated: "2022-08-30T23:34:26.730676491Z"
+generated: "2022-10-27T11:19:12.049910051Z"
