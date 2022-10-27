@@ -3,23 +3,23 @@ entries:
   alfred:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-27T11:19:12.04990305Z"
+    created: "2022-10-27T11:22:53.224225084Z"
     description: alfred application
-    digest: ea6f90c29d70805f2fa42a128f715dd4c04e1e8c727df8731277368cc2672104
+    digest: a7e8d03f1604638b7635af5411d392a46b51596cf4b457bdfcd10c94ae540c85
     name: alfred
     type: application
     urls:
-    - https://github.com/Labbs/helm-charts/releases/download/alfred-0.1.0/alfred-0.1.0.tgz
+    - https://raw.githubusercontent.com/labbs/helm-charts/gh-pages/alfred-0.1.0.tgz
     version: 0.1.0
   github-actions-exporter:
   - apiVersion: v2
     appVersion: 1.8.1
-    created: "2022-08-30T23:34:26.731669997Z"
+    created: "2022-10-27T11:22:53.224603284Z"
     description: github-actions exporter for prometheus
-    digest: c11aa69dee2ce4827b62be73b3e50fd726fd4ca0eb722edfb83846cbbaf513d2
+    digest: defa236ab4ce0e2cf4cadb5aa777015f194a2ce28a47f8d74e654a7125d9ea17
     name: github-actions-exporter
     type: application
     urls:
-    - https://labbs.github.io/helm-charts/github-actions-exporter-0.1.4.tgz
+    - https://raw.githubusercontent.com/labbs/helm-charts/gh-pages/github-actions-exporter-0.1.4.tgz
     version: 0.1.4
-generated: "2022-10-27T11:19:12.049910051Z"
+generated: "2022-10-27T11:22:53.223650384Z"
