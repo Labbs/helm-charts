@@ -11,21 +11,42 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          path: 'src'
+          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: 'dest'
+          ref: 'gh-pages'
           fetch-depth: 0
 
       - name: Install Helm
-        uses: azure/setup-helm@v1
-        
-      - name: Configure Git
+        uses: azure/setup-helm@v3
+
+      - name: Validate Helm Charts
+        shell: bash
         run: |
+          find src/charts/ -type f -name 'Chart.yaml' | sed -r 's|/[^/]+$||' | sort | uniq | xargs -L 1 helm dep up
+          for d in charts/*/ ; do
+              echo "$d"
+              helm lint --quiet "$d"
+          done
+      - name: Package Helm Charts
+        shell: bash
+        run: |
+          find src/charts/ -type f -name 'Chart.yaml' | sed -r 's|/[^/]+$||' | sort | uniq | xargs -L 1 helm dep up
+          for d in src/charts/*/ ; do
+              echo "$d"
+              helm package "$d" -u -d dest
+          done
+      - name: Push New Files
+        shell: bash
+        working-directory: dest
+        run: |
+          helm repo index . --url https://raw.githubusercontent.com/labbs/helm-charts/gh-pages/
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"  
-          
-      ## This is required to consider the old Circle-CI Index and to stay compatible with all the old releases.
-      - name: Fetch current Chart Index 
-        run: |
-          git checkout origin/gh-pages index.yaml
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.4.0
-        env:
-          CR_TOKEN: "${{ secrets.GH_TOKEN }}"
+          git add $(git ls-files -o --exclude-standard)
+          git add index.yaml
+          git commit -m "Updated from ref: $GITHUB_SHA"
+          git push
