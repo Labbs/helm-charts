@@ -3,7 +3,17 @@ entries:
   alfred:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-27T12:15:20.391421963Z"
+    created: "2022-10-27T21:22:16.215839023Z"
+    description: alfred application
+    digest: 3601da843aee26936dba28d158c641ad2550176d19e4a16b6f27093e5990c6b7
+    name: alfred
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/labbs/helm-charts/gh-pages/alfred-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-10-27T21:22:16.215512301Z"
     description: alfred application
     digest: f8dee6b1c7de99adbf515f3dcc003aa71f802ed51dc555943d0a8f6733c8023f
     name: alfred
@@ -13,7 +23,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-27T12:15:20.391094265Z"
+    created: "2022-10-27T21:22:16.215169978Z"
     description: alfred application
     digest: 1145bf9e00a859a48f055630133b6b73a87f53c24a35f75d49b66f4efeb2d726
     name: alfred
@@ -23,7 +33,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-27T12:15:20.390752166Z"
+    created: "2022-10-27T21:22:16.214811054Z"
     description: alfred application
     digest: 3ef6281b830a2feee99e48ccd8e35743241edce9a3551177a6d0447f24bc33a0
     name: alfred
@@ -33,7 +43,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-10-27T12:15:20.389653171Z"
+    created: "2022-10-27T21:22:16.214391527Z"
     description: alfred application
     digest: a7e8d03f1604638b7635af5411d392a46b51596cf4b457bdfcd10c94ae540c85
     name: alfred
@@ -44,12 +54,12 @@ entries:
   github-actions-exporter:
   - apiVersion: v2
     appVersion: 1.8.1
-    created: "2022-10-27T12:15:20.391823761Z"
+    created: "2022-10-27T21:22:16.21625465Z"
     description: github-actions exporter for prometheus
-    digest: f692e72450c436e6b616249b6c3f26772737b846c7b3ef87e46bab9d6cc9712e
+    digest: 176d78ffb2655f3a55729d18595398a52f3636afde4562fea0bee0e578ad3255
     name: github-actions-exporter
     type: application
     urls:
     - https://raw.githubusercontent.com/labbs/helm-charts/gh-pages/github-actions-exporter-0.1.4.tgz
     version: 0.1.4
-generated: "2022-10-27T12:15:20.388972474Z"
+generated: "2022-10-27T21:22:16.212810222Z"
